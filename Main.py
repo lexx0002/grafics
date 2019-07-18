@@ -28,7 +28,7 @@ def Ruth_and_Robert_histogram():
         names = ['Name','Gender','Count'])
         names_all = pd.concat(names_by_year, names = ['Year', 'Pos'])
 
-#    name_dynamics_cols = (names_all.groupby([names_all.index.get_level_values(0),'Name'])
+    name_dynamics_cols = (names_all.groupby([names_all.index.get_level_values(0),'Name'])
     (names_all.groupby([names_all.index.get_level_values(0), 'Name'])
     .sum()
     .query('Name == ["Ruth", "Robert"]')
